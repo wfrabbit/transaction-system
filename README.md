@@ -37,27 +37,33 @@ The transaction system will now be running on port `8080`. You can use Postman o
 
 ### Create account
 
-curl --location '10.103.0.160:8080/accounts' \
+```bash
+curl --location 'localhost:8080/accounts' \
 --header 'Content-Type: application/json' \
 --data '{
     "account_id": 1,
     "initial_balance": 100
 }'
+```
 
 ### Get account detail
 
-curl --location '10.103.0.160:8080/accounts/1'
+```bash
+curl --location 'localhost:8080/accounts/1'
+```
 
 ### Make transaction
 
-curl --location '10.103.0.160:8080/transactions' \
+```bash
+curl --location 'localhost:8080/transactions' \
 --header 'Content-Type: application/json' \
 --data '{
     "source_account_id": 1,
     "destination_account_id": 2,
     "amount": 50
 }'
+```
 
 ## Optional
 
-The succesfull transactions are recorded in Postgres table: transaction_db.transactions. You can use SQL client to query them.
+The succesfull transactions are recorded in Postgres table: **transaction_db.transactions**. You can use SQL client to query them.
