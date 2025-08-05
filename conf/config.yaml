@@ -1,0 +1,1 @@
+database_url: "postgres://wangfeng:wangfeng@localhost:5432/transaction_db"
